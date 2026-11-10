@@ -144,7 +144,7 @@ export default function ContactSection() {
                   rel="noopener noreferrer"
                   className="text-cyan-400 hover:underline"
                 >
-                  linkedin.com/in/oussama-negzaoui
+                  linkedin.com/in/oussama-negzaoui-6632431bb
                 </a>
               </div>
             </div>

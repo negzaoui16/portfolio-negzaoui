@@ -7,7 +7,7 @@ export const PERSONAL_INFO = {
   phone: "+216 28 505 612",
   email: "negzaouioussama15@gmail.com",
   github: "https://github.com/negzaoui16",
-  linkedin: "https://linkedin.com/in/oussama-negzaoui",
+  linkedin: "https://www.linkedin.com/in/oussama-negzaoui-6632431bb/",
   status: "🟢 Available for PFE 2027 & International Relocation",
   summary:
     "Engineering student at ESPRIT (Mobile Major, class of 2027) with a Bachelor in Computer Science from ISAMM (2024). Specializing in architecting cross-platform mobile apps (Flutter BLoC & Kotlin Compose), high-throughput enterprise backends (NestJS, FastAPI, Symfony), and state-of-the-art AI systems (Multimodal RAG, Computer Vision & Audio ML).",
