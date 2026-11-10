@@ -29,10 +29,12 @@ export default function InteractiveTerminal() {
     },
   ]);
 
-  const terminalEndRef = useRef<HTMLDivElement | null>(null);
+  const terminalScrollRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (terminalScrollRef.current) {
+      terminalScrollRef.current.scrollTop = terminalScrollRef.current.scrollHeight;
+    }
   }, [output]);
 
   const quickCommands = ["help", "projects", "skills", "experience", "hire", "clear"];
@@ -227,7 +229,10 @@ Feel free to send a message via the Contact section below!`,
       </div>
 
       {/* Terminal Output Area */}
-      <div className="h-64 overflow-y-auto p-4 space-y-2 text-slate-300 font-mono text-xs sm:text-sm">
+      <div
+        ref={terminalScrollRef}
+        className="h-64 overflow-y-auto p-4 space-y-2 text-slate-300 font-mono text-xs sm:text-sm"
+      >
         {output.map((line) => (
           <div key={line.id} className="leading-relaxed">
             {line.type === "command" && (
@@ -246,7 +251,6 @@ Feel free to send a message via the Contact section below!`,
             )}
           </div>
         ))}
-        <div ref={terminalEndRef} />
       </div>
 
       {/* Quick Command Chips */}
@@ -272,6 +276,8 @@ Feel free to send a message via the Contact section below!`,
           id="terminal-command-input"
           name="terminal-command-input"
           type="text"
+          autoComplete="off"
+          spellCheck={false}
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKeyDown}

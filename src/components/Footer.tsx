@@ -50,7 +50,7 @@ export default function Footer() {
         <div className="flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/60 px-3.5 py-1.5 text-slate-300">
           <Clock className="h-3.5 w-3.5 text-cyan-400" />
           <span>Tunis, TN:</span>
-          <span className="text-emerald-400 font-bold">{time || "Loading..."}</span>
+          <span suppressHydrationWarning className="text-emerald-400 font-bold">{time || "Loading..."}</span>
           <span className="text-slate-500">(GMT+1)</span>
         </div>
 

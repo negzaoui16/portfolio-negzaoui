@@ -192,6 +192,7 @@ export default function ContactSection() {
                         id="contact-name"
                         name="name"
                         type="text"
+                        autoComplete="name"
                         required
                         value={formState.name}
                         onChange={(e) =>
@@ -209,6 +210,7 @@ export default function ContactSection() {
                         id="contact-email"
                         name="email"
                         type="email"
+                        autoComplete="email"
                         required
                         value={formState.email}
                         onChange={(e) =>
@@ -228,6 +230,7 @@ export default function ContactSection() {
                       id="contact-subject"
                       name="subject"
                       type="text"
+                      autoComplete="off"
                       required
                       value={formState.subject}
                       onChange={(e) =>
@@ -245,6 +248,7 @@ export default function ContactSection() {
                     <textarea
                       id="contact-message"
                       name="message"
+                      autoComplete="off"
                       rows={4}
                       required
                       value={formState.message}
