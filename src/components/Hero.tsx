@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, Mail, Sparkles, Terminal as TerminalIcon, Cpu, Smartphone, Globe } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 import { PERSONAL_INFO } from "@/data/portfolioData";
+import AnimatedProfileCard from "./AnimatedProfileCard";
 import InteractiveTerminal from "./InteractiveTerminal";
 
 export default function Hero() {
@@ -116,13 +117,16 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Column: Interactive Terminal CLI (5 cols) */}
+          {/* Right Column: Animated Profile Card & Interactive Terminal CLI (5 cols) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="lg:col-span-5 w-full"
+            className="lg:col-span-5 w-full flex flex-col justify-center"
           >
+            {/* Holographic Animated Profile Card */}
+            <AnimatedProfileCard />
+
             <div className="relative">
               {/* Outer Glow effect behind terminal */}
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyan-500/20 via-indigo-500/20 to-purple-500/20 blur-xl opacity-75" />
