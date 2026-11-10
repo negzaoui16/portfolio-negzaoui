@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portfolio-negzaoui.vercel.app"),
   title: "Oussama Negzaoui | Software & Mobile Engineer | Flutter & Full-Stack | AI Integration",
   description:
     "Engineering portfolio of Oussama Negzaoui (ESPRIT / ISAMM). Specializing in Flutter (BLoC), Android Native (Kotlin Compose), NestJS, FastAPI, Multimodal RAG, and Web3 DLT.",
@@ -33,8 +34,25 @@ export const metadata: Metadata = {
     title: "Oussama Negzaoui | Software & Mobile Engineer",
     description:
       "Explore production mobile apps, AI pipelines, and distributed backends engineered by Oussama Negzaoui.",
+    url: "https://portfolio-negzaoui.vercel.app",
+    siteName: "Oussama Negzaoui Portfolio",
+    images: [
+      {
+        url: "/profile.png",
+        width: 800,
+        height: 800,
+        alt: "Oussama Negzaoui - Software & Mobile Engineer",
+      },
+    ],
     type: "website",
     locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Oussama Negzaoui | Software & Mobile Engineer",
+    description:
+      "Explore production mobile apps, AI pipelines, and distributed backends engineered by Oussama Negzaoui.",
+    images: ["/profile.png"],
   },
 };
 
